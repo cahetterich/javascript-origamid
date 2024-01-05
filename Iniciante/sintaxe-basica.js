@@ -1,5 +1,5 @@
 /* 
-1 - Sintaxe Básica
+Primeira Sintaxe Básica
 */
 
 const nome = "Carla";
@@ -13,11 +13,15 @@ somar(2, 4); //retorna a soma de a + b
 //O resultado é 6
 
 /* 
-2 - Sintaxe Básica
+Segunda Sintaxe Básica
 */
         //document = chama no html
 const btn = document.querySelector('.btn'); // função que dá ação em um botão/btn
 
 btn.addEventListener('click', function() { //adicionamos um evento (addEventListener)
-    btn.classList.add('ativo'); // quando a pessoa clicar no botão 'ativa' ele
+    btn.classList.add('ativo'); // quando a pessoa clicar no botão 'ativa' ele (muda de cor atráves do css)
 });
+
+/* 
+
+*/
