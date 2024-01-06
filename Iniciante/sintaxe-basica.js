@@ -23,5 +23,5 @@ btn.addEventListener('click', function() { //adicionamos um evento (addEventList
 });
 
 /* 
-
+VARIÁVEIS
 */
