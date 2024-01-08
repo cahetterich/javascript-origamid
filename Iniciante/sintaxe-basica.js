@@ -84,5 +84,5 @@ console.log(varNaoDefinida);
 // retorna nome is not defined
 
 /* 
-HOISTING
+HOISTING = São movidas para cima do código, porém o valor atribuído não é movido.
 */
