@@ -86,3 +86,26 @@ console.log(varNaoDefinida);
 /* 
 HOISTING = São movidas para cima do código, porém o valor atribuído não é movido.
 */
+
+// atribuir a var após o console.log não mostrará nada, pois o JS lê linha após linha
+console.log(nome);
+var nome = 'André'; 
+// Retorna undefined
+
+var profissao = 'Designer';
+console.log(profissao);
+// Retornar Designer
+
+/* 
+MUDAR O VALOR ATRIBUÍDO = É possível mudar os valores atribuídos a variáveis declaradas com var e let. Porém não é possível modificar valores das declaradas com const
+*/
+
+var idadee = 28;
+idadee = 29;
+
+let preco = 50;
+preco = 25;
+
+const possuiFaculdadee = true;
+possuiFaculdadee = false;
+// Retorna um erro
