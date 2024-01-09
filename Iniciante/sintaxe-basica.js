@@ -101,16 +101,47 @@ MUDAR O VALOR ATRIBUÍDO = É possível mudar os valores atribuídos a variávei
 */
 
 var comida;
-console.log(comida);
+console.log(comida); // aparece undefined, pois não foi definida a nossa var
 comida = 'Feijão';
 console.log(comida);
 
-var idadee = 28;
-idadee = 29;
+//podemos redeclarar o valor / mudar ele também
 
-let precoo = 50;
+var time = 'Vasco'; // primeiro valor declarado
+console.log(time); 
+time = 'Flamengo'; // segundo valor declarado
+console.log(time);
+
+
+var idadee = 28; // var pode ser alterado
+var idadee = 29;
+
+let precoo = 50; // let pode ser alterado, contanto que não seja incluido novamente "let" antes
 precoo = 25;
 
-const possuiFaculdad = true;
-possuiFaculdad = false;
+const possuiFaculdad = true; // const não pode ser alterado, ela é única
 // Retorna um erro
+
+/*
+EXERCÍCIO
+*/
+
+// Declarar uma variável com o seu nome
+let meuNome = 'Carla';
+
+// Declarar uma variável com a sua idade
+let minhaIdade = 31;
+
+// Declarar uma variável com a sua comida
+// favorita e não atribuir valor
+var empada;
+
+// Atribuir valor a sua comida favorita
+var empada = 'Empada de frango';
+
+// Declarar 5 variáveis diferentes sem valores
+let animal;
+let raca;
+let peso;
+let dono;
+let nascimento;  
