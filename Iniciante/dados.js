@@ -4,8 +4,8 @@
 todos são primiticos, exceto os objetos
  */
 
-var nome = 'André'; // String
-var idade = 28; // Number
+var nome = 'Carla'; // String
+var idade = 31; // Number
 var possuiFaculdade = true; // Boolean -  true/false
 var time; // Undefined
 var comida = null; // Null
@@ -29,3 +29,13 @@ var time = null;
 console.log(typeof time);
 // typeof null retorna object
                        
+/*
+STRING
+
+Você pode somar uma string e assim concatenar as palavras.
+*/
+
+var nome = 'Carla';
+var sobrenome = 'Hetterich';
+var nomeCompleto = nome + ' ' + sobrenome;
+console.log(nomeCompleto);
