@@ -80,7 +80,7 @@ var possuiFaculdadeNoExterior;
 DECLARAR = Erro ao tentar utilizar uma variável que não foi declarada.
 */
 
-console.log(varNaoDefinida);
+//console.log(varNaoDefinida);
 // retorna nome is not defined
 
 /* 
@@ -100,12 +100,17 @@ console.log(profissao);
 MUDAR O VALOR ATRIBUÍDO = É possível mudar os valores atribuídos a variáveis declaradas com var e let. Porém não é possível modificar valores das declaradas com const
 */
 
+var comida;
+console.log(comida);
+comida = 'Feijão';
+console.log(comida);
+
 var idadee = 28;
 idadee = 29;
 
-let preco = 50;
-preco = 25;
+let precoo = 50;
+precoo = 25;
 
-const possuiFaculdadee = true;
-possuiFaculdadee = false;
+const possuiFaculdad = true;
+possuiFaculdad = false;
 // Retorna um erro
