@@ -177,14 +177,79 @@ console.log(total4);
 
 /* 
 OPERADORES ARITMÉTICOS UNÁRIOS 
+
 */
 
+// ++ = incremento
 var incremento = 5;
-console.log(incremento++); // 5
+console.log(incremento++); // 5 - incluimos o '++' para que seja incrementado mais um na próxima vez que for 'chamado'
 console.log(incremento); // 6
 
 var incremento2 = 5;
-console.log(++incremento2); // 6
+console.log(++incremento2); // 6 - se incluirmos o '++' antes, ele já somará
 console.log(incremento2); // 6
 
+// é igual a 
+var x = 7;
+x = x + 1;
+console.log(x);
+
 //Mesma coisa para o decremento --x
+
+var decremento1 = 5;
+console.log(--decremento1); // 4 - se incluirmos o '--' antes, ele diminui 1 número
+
+
+// O '+' e '-' tenta transformar o valor seguinte em número
+//porem se incluirmos em uma string dará NaN
+var frase = 'Isso é um teste';
++frase; // NaN
+-frase; // NaN
+
+//já se a string for apenas de números retornará um número
+var idade = '28'; // também podemos transformar em número colocando o + antes de '28' => +'28';
++idade; // 28 (número)
+-idade; // -28 (número)
+console.log(+idade + 5); // 33 
+
+//porém, se utilizarmos apenas o '+' ele vai contatenar, e não somar como desejado
+somaIdade = 5;
+console.log(idade + somaIdade); // 285
+//por isso precisamos colocar o '+' antes de idade, para que seja transformado em um número
+
+var possuiFaculdade = true;
+console.log(+possuiFaculdade); // 1
+
+// O '-' antes de um número torna ele negativo
+
+/*
+EXERCÍCIO
+*/
+
+// Qual o resultado da seguinte expressão?
+var total = 10 + 5 * 2 / 2 + 20; // 35
+console.log(total);
+
+// Crie duas expressões que retornem NaN
+var NaN1 = 'Faremos Lasanha hoje' / 2; // NaN (Not a Number)
+console.log(NaN1);
+
+var NaN2 = '30 é o ano do sucesso'; // NaN (Not a Number)
+console.log(+NaN2);
+
+// Somar a string '200' com o número 50 e retornar 250
+var stringNumero = '200';
+console.log(+stringNumero + 50);
+
+// Incremente o número 5 e retorne o seu valor incrementado
+
+var incremento3 = 5;
+console.log(++incremento3);
+
+// Como dividir o peso por 2?
+var numero = '80';
+var unidade = 'kg';
+var peso = numero + unidade; // '80kg'
+var pesoPorDois = peso / 2; // NaN (Not a Number)   
+
+console.log(+numero / 2, unidade);
