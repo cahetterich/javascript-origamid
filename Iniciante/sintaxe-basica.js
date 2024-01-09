@@ -128,16 +128,23 @@ EXERCÍCIO
 
 // Declarar uma variável com o seu nome
 let meuNome = 'Carla';
+console.log(meuNome);
 
 // Declarar uma variável com a sua idade
 let minhaIdade = 31;
+console.log(minhaIdade);
 
 // Declarar uma variável com a sua comida
 // favorita e não atribuir valor
-var empada;
+var comidaFavorita;
+console.log(comidaFavorita);
 
 // Atribuir valor a sua comida favorita
-var empada = 'Empada de frango';
+comidaFavorita = 'Empada de frango';
+console.log(comidaFavorita);
+
+//ou
+console.log(meuNome, minhaIdade, comidaFavorita);
 
 // Declarar 5 variáveis diferentes sem valores
 let animal;
@@ -145,3 +152,11 @@ let raca;
 let peso;
 let dono;
 let nascimento;  
+
+//ou
+
+var time = 'Vasco', 
+    professor, 
+    pais, 
+    endereco, 
+    rua;
