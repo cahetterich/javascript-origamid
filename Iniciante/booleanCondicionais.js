@@ -58,3 +58,63 @@ if(almocei && jantei) {
 } else {
   console.log('Não comi nada');
 }
+
+//outro exemplo
+
+var nome = ''; //vazio  
+
+if (nome) {
+    console.log(nome);
+} else {
+    console.log('Nome não existe');
+}
+
+/*
+TRUTHY E FALSY
+
+Existem valores que retornam true e outros que retornam false quando verificados em uma expressão booleana
+*/
+
+//Falsy:
+// if(false)
+// if(0) // ou -0
+// if(Nan)
+// if(null)
+// if(undefined)
+// if('')  // ou "" ou `` sem espaço
+
+// Todo o resto é truthy - true:
+// if(true)
+// if(1)
+// if(' ') // tem espaço
+// if('andre')
+// if(-5)
+// if({})
+
+/*
+OPERADORES LOGICOS DE NEGAÇÃO
+
+O operador ! , nega uma operação booleana. Ou seja, !true é igual a false
+basicamente retorna o resultado contrário
+*/
+
+//Truthy
+// if(!true) // false
+// if(!1) // false
+// if(!'') // true
+// if(!null) // true
+// if(!undefined) // true
+// if(!!' ') // true
+// if(!!'') // false
+
+//obs: podemos utilizar o !! para verificar se uma expressão é truthy ou falsy
+var possuiGraduacao1 = true;
+
+if(!possuiGraduacao1) {
+    console.log(possuiGraduacao1);
+    console.log('Não possui graduação');
+}
+
+/*
+SWITCH
+ */
