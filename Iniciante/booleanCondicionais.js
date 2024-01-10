@@ -69,6 +69,30 @@ if (nome) {
     console.log('Nome não existe');
 }
 
+
+/*
+SWITCH
+
+Com o switch você pode verificar se uma variável é igual à diferentes valores utilizando o case. Caso ela seja igual, você pode fazer alguma coisa e utilizar a palavra chave break; para cancelar a continuação. O valor de default ocorrerá caso nenhuma das anteriores seja verdadeira.
+ */
+
+var corFavorita = 'Azul';
+
+switch (corFavorita) {
+  case 'Azul':
+    console.log('Olhe para o céu.');
+    break;
+  case 'Vermelho':
+    console.log('Olhe para rosas.');
+    break;
+  case 'Amarelo':
+    console.log('Olhe para o sol.');
+    break;
+  default:
+    console.log('Feche os olhos');
+}
+
+
 /*
 TRUTHY E FALSY
 
@@ -159,8 +183,140 @@ O == faz uma comparação não tão estrita e o === faz uma comparação estrita
 var x = 10;
 console.log(x == 10); // true, pois x é igual a 10 
 
+var y = 'Gato';
+console.log(y == 'gato'); // false, pois um começa com letra minúscula e o outro com maiúscula
 
+console.log(y !== 'Gato'); // false, aqui por mais que seja igual estamos perguntando se é diferente, e por isso dá falso, pois são iguais
 
 /*
-SWITCH
- */
+OPERADORES LÓGICOS &&
+
+&& Compara se uma expressão e a outra é verdadeira
+*/
+
+//retorna sempre o valor falso comparando com outro valor
+true && true; // true
+true && false; // false
+false && true; // false
+'Gato' && 'Cão'; // 'Cão'
+(5 - 5) && (5 + 5); // 0
+'Gato' && false; // false
+(5 >= 5) && (3 < 6); // true
+
+// Se ambos os valores forem true ele irá retornar o último valor verificado Se algum valor for false ele irá retornar o mesmo e não irá continuar a verificar os próximos
+
+if( (5 - 5) && (5 + 5)) { // false pois 5 - 5 = 0 que é falso
+    console.log('Verdairo');
+} else {
+    console.log('Falso');
+}
+
+//ou
+
+var condicional = (5 - 10) && (5 + 5);
+
+if(condicional) {            // true pois 5 - 10 = -5 que é negativo, porém um número verdadeiro, por isso dá true
+    console.log('Verdadeiro', condicional);
+} else {
+    console.log('Falso');
+}
+
+/*
+OPERADORES LÓGICOS ||
+
+|| Compara se uma expressão ou outra é verdadeira
+*/
+
+// retorna sempre o primeiro valor verdadeiro comparando com outro valor
+true || true; // true
+true || false; // true
+false || true; // true
+'Gato' || 'Cão'; // 'Gato'
+(5 - 5) || (5 + 5); // 10
+'Gato' || false; // Gato
+(5 >= 5) || (3 < 6); // true
+
+
+
+var condicional2 = (5 - 5) || (5 + 5) || (10 - 2); // 5-5=0 (falso) ou 5+5=10 (verdedeiro) ou 10-2=8 (verdadeiro)
+if(condicional2) {            // true  10, pois retorna o primeiro valor true que encontrar
+    console.log('Verdadeiro', condicional2);
+} else {
+    console.log('Falso');
+}
+
+var condicional3 = (5 - 5) || (5 + 5) && (10 - 2); // 5-5=0 (falso) ou 5+5=10 (verdedeiro) ou 10-2=8 (verdadeiro)
+if(condicional3) {            // true  8, pois usando && ele retorna o último valor true que encontrar
+    console.log('Verdadeiro', condicional3);
+} else {
+    console.log('Falso');
+}
+
+/*
+EXERCÍCIO
+*/
+
+// Verifique se a sua idade é maior do que a de algum parente
+// Dependendo do resultado coloque no console 'É maior', 'É igual' ou 'É menor'
+
+var minhaIdade = 31;    
+var idadeParente = 54;
+
+if(minhaIdade > idadeParente) {
+    console.log('É maior');
+} else if(minhaIdade < idadeParente) {
+    console.log('É menor');
+} else {
+    console.log('É igual');
+}
+
+// Qual valor é retornado na seguinte expressão?
+var expressao = (5 - 2) && (5 - ' ') && (5 - 2); // 3, 5, 3
+console.log(expressao); // retorna 3, true
+
+var expressao1 = (5 - 2) && (5 - 's') && (5 - 2); // 3, NaN, 3
+console.log(expressao1); // retorna NaN, false, pois mostra o falso encontrado
+
+// Verifique se as seguintes variáveis são Truthy ou Falsy
+var nome = 'Andre';
+var idade = 28;
+var possuiDoutorado = false;
+var empregoFuturo;
+var dinheiroNaConta = 0;
+console.log(!!nome);         // true 
+console.log(!!idade);        // true 
+console.log(!!possuiDoutorado); // false: ''
+console.log(!!empregoFuturo); // false: undefined
+console.log(!!dinheiroNaConta); // false 0
+
+// Compare o total de habitantes do Brasil com China (valor em milhões)
+var brasil = 207;
+var china = 1340;
+
+if(brasil == china){
+    console.log('Brasil tem o mesmo total de habitantes');
+} else {
+    console.log('Brasil tem o menor total de habitantes');
+}
+
+//ou
+
+if(brasil > china){
+    console.log('Brasil tem mais habitantes');
+} else {
+    console.log('Brasil tem menos habitantes');
+}
+
+// O que irá aparecer no console?
+if(('Gato' === 'gato') && (5 > 2)) {
+  console.log('Verdadeiro');
+} else {
+  console.log('Falso'); // falso, pois 'Gato' é diferente de 'gato'
+}
+
+// O que irá aparecer no console?
+if(('Gato' === 'gato') || (5 > 2)) {
+  console.log('Gato' && 'Cão'); // Cão, pois se tudo for verdadeiro no && aparecerá o último resultado 
+} else {
+  console.log('Falso');
+}
