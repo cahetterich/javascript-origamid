@@ -104,16 +104,62 @@ basicamente retorna o resultado contrário
 // if(!'') // true
 // if(!null) // true
 // if(!undefined) // true
-// if(!!' ') // true
+
+//obs: podemos utilizar o !! para verificar se uma expressão é truthy ou falsy, pois ele confirma qual é o resultado
+
+// if(!!' ') // true 
 // if(!!'') // false
 
-//obs: podemos utilizar o !! para verificar se uma expressão é truthy ou falsy
-var possuiGraduacao1 = true;
 
-if(!possuiGraduacao1) {
-    console.log(possuiGraduacao1);
-    console.log('Não possui graduação');
+var possuiGraduacao2 = false; // aqui é falso, mas se torna true na visão do ! para que seja mostrado na função
+
+if(!possuiGraduacao2) { // falso se torna true
+    console.log(possuiGraduacao2);
+    console.log('Não possui graduação'); // aparece a mensagem
 }
+
+
+/*
+OPERADORES DE COMPARAÇÃO
+
+Vão sempre retornar um valor booleano
+*/
+
+// > maior
+// < menor
+// <= menor ou igual
+// >= maior ou igual
+
+
+10 > 5; // true
+5 > 10; // false
+20 < 10; //false
+10 <= 10; // true
+10 >= 11; // false
+
+/*
+O == faz uma comparação não tão estrita e o === faz uma comparação estrita, ou seja, o tipode dado deve ser o mesmo quando usamos ===
+*/
+
+// == igual
+// === estritamente igual (dado e tipo)
+// != diferente
+// !== estritamente diferente (dado e tipo)
+
+10 == '10'; // true
+10 == 10; // true
+10 === '10'; // false
+10 === 10; // true
+10 != 15; // true
+10 != '10'; // false
+// 10 !=== '10'; // true
+
+//exemplo
+
+var x = 10;
+console.log(x == 10); // true, pois x é igual a 10 
+
+
 
 /*
 SWITCH
