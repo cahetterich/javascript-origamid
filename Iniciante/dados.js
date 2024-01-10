@@ -140,7 +140,7 @@ var soma1 = '100' + 50; // 10050  - é uma string
 // na subtração, multiplicação e divisão, se houver uma string apenas com números o JS fará a conta
 var subtracao1 = '100' - 50; // 50   
 var multiplicacao1 = '100' * '2'; // 200
-// porém, se ouver uma frase escrita, aparecerá como NaN =
+// porém, se houver uma frase escrita, aparecerá como NaN =
 var divisaoNan = 'Comprei 10' / 2; // NaN (Not a Number)
 // É possível verificar se uma variável é NaN ou não com a função isNaN()
 
@@ -253,3 +253,12 @@ var peso = numero + unidade; // '80kg'
 var pesoPorDois = peso / 2; // NaN (Not a Number)   
 
 console.log(+numero / 2, unidade);
+
+/*
+var numero = +'80' / 2;
+var unidade = 'kg';
+var peso = numero + unidade; // '40kg'
+console.log(peso);
+
+ */
+
