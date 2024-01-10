@@ -4,7 +4,7 @@ FUNÇÕES
 Bloco de código que pode ser executado e reutilizado. Valores podem ser passados por uma função e a mesma retorna outro valor.
 */
 
-function areaQuadrado(lado) {
+function areaQuadrado(lado) { // lado = parametro
     return lado * lado;
   }
   
@@ -21,3 +21,4 @@ function pi() {
   var total = 5 * pi(); // 15.7
   
 //Parênteses () executam uma função
+
