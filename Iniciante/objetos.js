@@ -184,6 +184,13 @@ console.log(perfil);
 
 console.log(perfil.nomeCompleto());
 
+//ou 
+
+perfil.nomeCompleto2 = function() {
+  return `${this.nome} ${this.sobrenome}`;
+}
+console.log(perfil.nomeCompleto2());
+
 // Modifique o valor da propriedade preco para 3000
 var carro = {
   preco: 1000,
@@ -199,11 +206,17 @@ console.log(carro.preco);
 // preto com 10 anos, que late ao ver um homem
 
 var cachorro = { 
-  raça: 'labrador', 
+  raca: 'labrador', 
   cor: 'preto', 
   idade: '10 anos', 
   
-  latir() {
-    return 'Latir'
+  latir(pessoa) {
+    if(pessoa === 'homem') {
+      return 'Latir'
+    } else
+    return 'Nao latir';
   }
 }
+
+console.log(cachorro.latir());
+console.log(cachorro.latir('homem'));
