@@ -220,3 +220,22 @@ var cachorro = {
 
 console.log(cachorro.latir());
 console.log(cachorro.latir('homem'));
+
+/*
+TUDO É OBJETO
+
+Strings, Números, Boolean, Objetos e mais, possuem propriedades e métodos. Por isso são objetos.
+*/
+
+var nome = 'André';
+
+console.log(nome.length); // 5 - total de caracteres da string 
+console.log(nome.charAt(1)); // 'n' - metodo () parenteses para evocar - retorna o caracter que está naquela posição
+console.log(nome.replace('ré', 'rei')); // 'Andrei'   - troca o primeiro argumento "ré" por "rei"
+console.log(nome); // 'André'   - todos esses metodos não alteram a var nome, só modificam momentaneamente 
+
+//Uma string herda propriedades e métodos do construtor String()
+
+/*
+NÚMEROS
+ */
