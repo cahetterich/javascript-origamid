@@ -93,7 +93,7 @@ Acesse propriedades de um objeto utilizando o ponto .
  */
 
 var menu = {
-    width: 800,
+    width: 800, 
     height: 50,
     backgroundColor: '#84E',
   }
@@ -114,3 +114,96 @@ menu.color = 'blue';  // inclui um novo item ao objeto menu
 
  Basta adicionar um novo nome e definir o valor.
  */
+
+ var menu2 = {
+  width: 800,
+}
+
+menu2.height = 50; // adicionamos propriedades incluinso o . ponto
+menu2.position = 'fixed'; 
+
+console.log(menu2.position);
+
+/*
+PALAVRA-CHAVE THIS
+
+this irá fazer uma referência ao próprio objeto.
+*/
+
+var height = 120;
+var menu3 = {
+  width: 800,
+  height: 50,
+  metadeHeight() {
+    return this.height / 2;   // this significa a mesma coisa que se escrevesemos menu3
+                              // se colocássemos apenas height, puxaria a primeira "var height = 120;" - criada fora da função
+  }
+}
+
+menu3.metadeHeight(); // 25
+// sem o this, seria 60
+
+//this irá retornar o próprio objeto
+console.log(menu3.metadeHeight());
+
+/*
+PROTÓTIPO E HERANÇA  
+
+Has Own Property - verifica se temos a propriedade no objeto
+O objeto herda propriedades e métodos do objeto que foi utilizado para criar o mesmo.
+*/
+
+var menu4 = { // objeto é uma função
+  width: 800,
+}
+
+console.log(menu4.hasOwnProperty('width')); // true   -  Has Own Property - verifica se temos a propriedade no objeto
+console.log(menu4.hasOwnProperty('height')); // false
+
+//hasOwnProperty é um método de Object - verifica se temos a propriedade no objeto
+// se usarmos .length contará quandos caracteres tem 
+
+/*
+EXERCÍCIO
+*/
+
+// Crie um objeto com os seus dados pessoais
+// Deve possui pelo menos duas propriedades nome e sobrenome
+
+var perfil = {
+  nome: 'Carla',
+  sobrenome: 'Hetterich Worlitz', 
+
+  nomeCompleto() {
+    return `${this.nome} ${this.sobrenome}`
+  }   
+};
+console.log(perfil);
+
+// Crie um método no objeto anterior, que mostre o seu nome completo
+
+console.log(perfil.nomeCompleto());
+
+// Modifique o valor da propriedade preco para 3000
+var carro = {
+  preco: 1000,
+  portas: 4,
+  marca: 'Audi',
+}
+
+carro.preco = 3000;
+
+console.log(carro.preco);
+
+// Crie um objeto de um cachorro que represente um labrador,
+// preto com 10 anos, que late ao ver um homem
+
+var cachorro = { 
+  raça: 'labrador', 
+  cor: 'preto', 
+  idade: '10 anos', 
+  
+  latir() {
+    return 'Latir'
+  }
+}
