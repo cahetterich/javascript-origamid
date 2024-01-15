@@ -227,15 +227,123 @@ TUDO É OBJETO
 Strings, Números, Boolean, Objetos e mais, possuem propriedades e métodos. Por isso são objetos.
 */
 
-var nome = 'André';
+var nome1 = 'ANDré';
 
-console.log(nome.length); // 5 - total de caracteres da string 
-console.log(nome.charAt(1)); // 'n' - metodo () parenteses para evocar - retorna o caracter que está naquela posição
-console.log(nome.replace('ré', 'rei')); // 'Andrei'   - troca o primeiro argumento "ré" por "rei"
-console.log(nome); // 'André'   - todos esses metodos não alteram a var nome, só modificam momentaneamente 
+console.log(nome1.length); // 5 - total de caracteres da string 
+console.log(nome1.charAt(1)); // 'n' - metodo () parenteses para evocar - retorna o caracter que está naquela posição
+console.log(nome1.replace('ré', 'rei')); // 'Andrei'   - troca o primeiro argumento "ré" por "rei"
+console.log(nome1); // 'André'   - todos esses metodos não alteram a var nome, só modificam momentaneamente 
 
+var nomeMinusculo = nome1.toLowerCase();
+console.log(nomeMinusculo); // 'andré'
 //Uma string herda propriedades e métodos do construtor String()
+
+/*
+Diferençã entre  metodo e propriedade
+
+Metodo/Função = nome.toLowerCase() - possui (), e se colocarmos sem aparecerá a sua função ex: f toLowerCase() { [native code]}
+
+Propriedade = nome.length  - não tem (), pois é uma propriedade
+
+*/
 
 /*
 NÚMEROS
  */
+
+var altura = 1.8;
+
+altura.toString(); // '1.8'  - transforma o número para string
+altura.toFixed(); // '2'    - arredonda o número 
+
+console.log(altura.toFixed());
+
+// Por um breve momento o número é envolvido em um Objeto (coerção), tendo acesso assim as suas propriedades e métodos
+
+
+/*
+FUNÇÕES
+
+também possuem métodos e propriedades
+*/
+
+function areaQuadrado(lado) {
+  return lado * lado;
+}
+
+areaQuadrado.toString(); // - toString pega toda a função e coloca dentro de uma string, como se fosse algo escrito
+//"function areaQuadrado(lado) {
+//  return lado * lado;
+//}"
+
+console.log(areaQuadrado.length); // .length retorna o total de argumentos/parametros da função que é  1 = (lado)
+console.log(areaQuadrado); // toString
+
+/*
+ELEMENTOS DO DOM
+*/
+
+//<a class="btn">Clique</a>
+
+
+var btn1 = document.querySelector('.btn1');  // 'document' é um objeto e 'querySelector()' é um mé
+
+//querySelector seleciona um elemento/tag dentro do HTML - chamamos como em css ".btn"
+
+btn1.classList.add('azul'); // adiciona a classe azul
+console.log(btn1.innerText); // 'Clique'
+btn1.addEventListener('click', function() {
+  console.log('Clicou');
+})
+
+//Praticamente todos os efeitos com JS são feitos utilizando propriedades e métodos de objetos do DOM.
+
+/*
+OBJETOS REVOLUCIONARAM A PROGRAMAÇÃO
+
+Web API's são métodos e propriedades que permitem a interação JavaScript e Browser.
+*/
+
+
+/*
+EXERCÍCIO
+*/
+
+// nomeie 3 propriedades ou métodos de strings
+
+var nome5 = 'Carla';
+
+console.log(nome5.toLocaleUpperCase()); // CARLA
+console.log(nome5.fixed());
+console.log(nome5.length); // propriedade
+console.log(nome5.slice());
+
+
+// nomeie 5 propriedades ou métodos de elementos do DOM
+
+var btn = document.querySelector('.btn'); 
+//btn.addEventListener
+//btn.appendChild
+//btn.id
+//btn.innerHTML
+//btn.outerHTML
+console.log(btn);
+
+// busque na web um objeto (método) capaz de interagir com o clipboard, 
+// clipboard é a parte do seu computador que lida com o CTRL + C e CTRL + V
+
+
+function myFunction() {
+  // Get the text field
+  var copyText = document.getElementById("myInput");
+
+  // Select the text field            
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+   // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);
+
+  // Alert the copied text
+  alert("Copied the text: " + copyText.value);
+}
