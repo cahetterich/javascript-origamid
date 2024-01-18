@@ -63,6 +63,9 @@ if(true) {
   console.log(carro); // Carro
   
   console.log('-------------');
+
+  // não leva função, e geralmente vem de if
+
 /*
 VAR VAZA O BLOCO
 */
