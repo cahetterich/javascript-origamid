@@ -66,7 +66,7 @@ if(true) {
     let mes = 'Dezembro';
     console.log(mes);
   }
-  console.log(mes); // apresentará rro, pois let e const não vazam do bloco
+  // console.log(mes); // apresentará erro, pois let e const não vazam do bloco
   
   console.log('-------------');
 
@@ -74,4 +74,54 @@ if(true) {
 
 /*
 VAR VAZA O BLOCO
+
+Mesmo com a condição falsa, a variável ainda será declarada utilizando hoisting e o valor ficará como undefined.
 */
+
+// var carro3;
+
+if(false) {
+  var carro3 = 'Palio';
+  console.log(carro3);
+}
+console.log(carro3); // undefined - é como se tivesse declarado ela no inicio, porém sem valor "var carro3;"
+
+console.log('-------------');
+/*
+CONST E LET NO LUGAR DE VAR
+
+A partir de agora vamos utilizar apenas const e let para declarmos variáveis.
+*/
+
+if(true) {
+  const carro4 = 'Ford';
+  console.log(carro4);
+}
+// console.log(carro4); // erro, carro is not defined pois const não vaza
+
+console.log('-------------');
+/*
+{} CRIA UM BLOCO
+
+Chaves {} criam um escopo de bloco, não confundir com a criação de objetos = {}
+*/
+
+{
+  var carro = 'Fusca';
+  // const ano = 2018; // não puxa const pois está dentro de um escopo declarada como const, se fosse var puxaria
+}
+console.log(carro); // Carro
+// console.log(ano); // erro ano is not defined
+
+console.log('-------------');
+/*
+FOR LOOP
+
+Ao utilizar var dentro de um forloop, que é um bloco, o valor do variável utilizada irá vazar e existir fora do loop.
+*/
+
+for(var i = 0; i < 10; i++) {
+  console.log(`Número ${i}`);
+}
+console.log(i); // 10
+
