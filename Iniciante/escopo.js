@@ -54,13 +54,19 @@ console.log('-------------');
 ESCOPO DE BLOCO
 
 Variáveis criadas com var, vazam o bloco. Por isso com a introdução do ES6 a melhor forma de declarmos uma variável é utilizando const e let, pois estas respeitam o escopo de bloco.
-*/
+*/   
 
 if(true) {
     var carro = 'Fusca';
     console.log(carro);
   }
   console.log(carro); // Carro
+
+  if(true) {
+    let mes = 'Dezembro';
+    console.log(mes);
+  }
+  console.log(mes); // apresentará rro, pois let e const não vazam do bloco
   
   console.log('-------------');
 
