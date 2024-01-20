@@ -120,8 +120,95 @@ FOR LOOP
 Ao utilizar var dentro de um forloop, que é um bloco, o valor do variável utilizada irá vazar e existir fora do loop.
 */
 
-for(var i = 0; i < 10; i++) {
+for(var i = 0; i < 10; i++) { // incrementa 1 número de cada vez de 0 à 9
   console.log(`Número ${i}`);
 }
-console.log(i); // 10
+console.log(i); // 10 - como o var vaza o escopo, ao puxar a 'var i' fora, acaba puxando i++ = 10, por isso é importante usar apenas let e const
 
+console.log('-------------');
+/*
+FOR LOOP COM LET
+
+Com o let evitamos que o número vaze.
+*/
+
+for(let y = 0; y < 10; y++) {
+  console.log(`Número ${y}`);
+}
+//console.log(y); // y is not defined
+
+
+console.log('-------------');
+/*
+CONST
+
+Mantém o escopo no bloco, impede a redeclaração e impede a modificação do valor da variável, evitando bugs no código.
+*/
+
+const mes = 'Dezembro';
+//mes = 'Janeiro'; // erro, tentou modificar o valor
+//const semana; // erro, declarou sem valor
+
+const data = { // o objeto não pode ser alterado mas os elementos podem
+  dia: 28,
+  mes: 'Dezembro',
+  ano: 2018,
+}
+console.log(data);
+console.log(data.dia = 29); // Funciona
+console.log(data); //  muda o dia para 29
+//data = 'Janeiro'; // erro
+
+
+console.log('-------------');
+/*
+LET
+
+Mantém o escopo no bloco, impede a redeclaração, mas permite a modificação do valor da variável.
+*/
+
+let ano;
+ano = 2018;
+ano++;
+console.log(ano); // 2019
+
+//let ano = 2020; // erro, redeclarou a variável
+
+//Geralmente vamos utilizar o const.
+
+console.log('-------------');
+/*
+EXERCÍCIO
+ */
+
+// Por qual motivo o código abaixo retorna com erros?
+{
+  var cor = 'preto';
+  const marca = 'Fiat';
+  let portas = 4;  
+//} - ao fechar o escopo, const e let não são 'puxados'
+//console.log(var, marca, portas); - erro proposto para correção
+console.log(cor, marca, portas); // - correto
+}
+
+// Como corrigir o erro abaixo?
+const dois = 2;
+function somarDois(x) {
+  //const dois = 2;
+  return x + dois;
+}
+function dividirDois(x) {
+  return x / dois;
+}
+console.log(somarDois(2)); //4 (2 + 2)
+console.log(dividirDois(8)); // 4 (8 / 2)
+
+// O que fazer para total retornar 500?
+const numero1 = 50;
+
+for(let numero = 0; numero < 10; numero++) {
+  console.log(numero);
+}
+
+const total = 10 * numero1;
+console.log(total);
